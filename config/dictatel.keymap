@@ -12,6 +12,7 @@
 #define DEVICE 3
 #define BLTH 4
 #define SNIPE 5
+#define MEDIA 6
 
 / {
   combos {
@@ -52,15 +53,15 @@
     default_layer {
       display-name = "Default";
       bindings = <
-	&mkp LCLK &ltm DEVICE SNIP &mkp MCLK &mkp RCLK
-        &mkp MB4                               &mto SCRLM MB5
+        &ltm MEDIA MB4 &mto DEVICE SNIPE &mkp MCLK &mkp RCLK
+        &mkp LCLK                      &ltm SCRLM MB5
       >;
     };
     scroll_tap_layer {
       display-name = "Scroll-Momentary";
       bindings = <
-        &trans &trans &to SCRLH &trans
-        &to SCRLH               &trans
+        &to SCRLH &trans &to SCRLH &trans
+        &trans               &trans
       >;
     };
     scroll_hold_layer {
@@ -89,6 +90,13 @@
       bindings = <
         &trans &to DEFAULT &trans &trans
         &trans               &trans
+      >;
+    };
+    media_layer {
+      display-name = "Media";
+      bindings = <
+        &to DEFAULT &mkp C_NEXT &mkp C_VOL_UP &mkp C_VOL_DN
+        &mkp C_PLAY_PAUSE               &mkp C_MUTE
       >;
     };
   };
