@@ -53,8 +53,8 @@
     default_layer {
       display-name = "Default";
       bindings = <
-        &ltm MEDIA MB4 &mto DEVICE SNIPE &mkp MCLK &mkp RCLK
-        &mkp LCLK                      &to SCRLH
+        &mkp RCLK &ltm SNIPE MB4 &ltm DEVICE MB5 &to SCRLH
+        &mkp LCLK                      &mkp MCLK
       >;
     };
     scroll_tap_layer {
@@ -67,8 +67,8 @@
     scroll_hold_layer {
       display-name = "Scroll-Keep";
       bindings = <
-        &trans &to DEFAULT &to DEFAULT &trans
-        &trans               &to DEFAULT
+        &trans &trans &trans &to DEFAULT
+        &trans               &trans
       >;
     };
     device_layer {
