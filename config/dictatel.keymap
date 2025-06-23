@@ -53,8 +53,8 @@
     default_layer {
       display-name = "Default";
       bindings = <
-        &mkp RCLK &ltm SNIPE MB4 &ltm DEVICE MB5 &to SCRLH
-        &mkp LCLK                      &mkp MCLK
+        &mkp MCLK &ltm SNIPE MB4 &ltm DEVICE MB5 &to SCRLH
+        &mkp LCLK                      &mkp RCLK
       >;
     };
     scroll_tap_layer {
